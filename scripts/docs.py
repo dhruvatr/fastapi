@@ -196,8 +196,8 @@ def get_en_url(path: Path) -> str:
         url_path = f"{url_path}/"
     else:
         url_path = ""
-    return f"https://fastapi.tiangolo.com/{url_path}"
-
+    url = f"https://fastapi.tiangolo.com/{url_path}"
+    return f"[{url}]({url})"
 
 def get_zensical_theme_language(lang: str) -> str:
     if lang == "zh-hant":
@@ -330,7 +330,8 @@ index_sponsors_template = """
 
 
 def sponsor_img_url(img: str) -> str:
-    return f"https://fastapi.tiangolo.com{img}"
+    url = f"https://fastapi.tiangolo.com{img}"
+    return f"[{url}]({url})"
 
 
 def remove_header_permalinks(content: str):
